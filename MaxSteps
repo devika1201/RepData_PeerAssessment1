@@ -1,3 +1,0 @@
-activity %>% group_by(interval) %>% 
-  summarize(meanByInterval = mean(steps, na.rm = TRUE)) %>%
-  filter(meanByInterval == max(meanByInterval))
