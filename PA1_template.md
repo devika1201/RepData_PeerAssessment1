@@ -1,6 +1,4 @@
-# Reproducible Research: Peer Assessment 1
-https://github.com/TomLous/coursera-reproducible-research-peer-assessment1/blob/master/PA1_template.md
-
+# RR: Peer Assessment 1
 
 ## Loading and preprocessing the data
 ##### 1. Load the data (i.e. read.csv())
@@ -31,7 +29,7 @@ stepsByDay <- tapply(activityData$steps, activityData$date, sum, na.rm=TRUE)
 qplot(stepsByDay, xlab='Total steps per day', ylab='Frequency using binwith 500', binwidth=500)
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of Plot1](figure/Plot1.png) 
 
 ##### 2. Calculate and report the mean and median total number of steps taken per day
 
@@ -59,7 +57,7 @@ ggplot(data=averageStepsPerTimeBlock, aes(x=interval, y=meanSteps)) +
     ylab("average number of steps taken") 
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of Plot2](figure/Plot2.png) 
 
 ##### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -97,7 +95,7 @@ stepsByDayImputed <- tapply(activityDataImputed$steps, activityDataImputed$date,
 qplot(stepsByDayImputed, xlab='Total steps per day (Imputed)', ylab='Frequency using binwith 500', binwidth=500)
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
+![plot of Plot3](figure/Plot3.png) 
 
 ##### ... and Calculate and report the mean and median total number of steps taken per day. 
 
@@ -131,4 +129,4 @@ ggplot(averagedActivityDataImputed, aes(interval, steps)) +
     ylab("avarage number of steps")
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
+![plot of Plot4](figure/Plot4.png) 
